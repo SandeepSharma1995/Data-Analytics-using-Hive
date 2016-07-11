@@ -16,7 +16,7 @@ stored as textfile;
 
 D. Load the data into the table
 -------------------------------
-LOAD DATA LOCAL INPATH 'txns1.txt' OVERWRITE INTO TABLE txnrecords;
+LOAD DATA LOCAL INPATH 'inputfile.txt' OVERWRITE INTO TABLE txnrecords;
 
 E. Describing metadata or schema of the table
 ---------------------------------------------
