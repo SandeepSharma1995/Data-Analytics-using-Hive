@@ -1,0 +1,32 @@
+A. Create Database
+------------------
+create database retail;
+
+B. Select Database
+------------------
+use retail;
+
+C. Create table for storing transactional records
+-------------------------------------------------
+create table txnrecords(txnno INT, txndate STRING, custno INT, amount DOUBLE, 
+category STRING, product STRING, city STRING, state STRING, spendby STRING)
+row format delimited
+fields terminated by ','
+stored as textfile;
+
+D. Load the data into the table
+-------------------------------
+LOAD DATA LOCAL INPATH 'txns1.txt' OVERWRITE INTO TABLE txnrecords;
+
+E. Describing metadata or schema of the table
+---------------------------------------------
+describe txnrecords;
+
+F. Counting no of records
+-------------------------
+select count(*) from txnrecords;
+
+G. Counting total spending by category of products
+--------------------------------------------------
+select category, sum(amount) from txnrecords group by category;
+
