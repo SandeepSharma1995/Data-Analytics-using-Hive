@@ -3,5 +3,5 @@
 
 1.Counting no of records
 
-2. Counting total spending by category of products
+2.Counting total spending by category of products
 
